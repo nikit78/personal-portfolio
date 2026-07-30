@@ -29,6 +29,13 @@
 5.  **Experience**: Timeline map of internships and professional roles.
 6.  **Contact**: Fully structured contact form ready for backend integration.
 
+## ✏️ Personalize Before Publishing
+* Replace **“Add your degree here”** in `index.html` with your actual college, degree, and graduation year.
+* Update each project’s GitHub and live-demo links with the specific repository or deployed URL. Do not leave a project link pointing only to your profile.
+* Add a professional headshot at `images/profile.jpg` for the best About section result.
+* Keep project descriptions outcome-focused: explain the problem, the technology used, and the result in 2–3 lines.
+* Add a PDF resume and link it from the hero once it is ready.
+
 ## 💻 Local Installation Setup
 If you want to run this project locally, no external dependencies are needed! 
 1. Clone this repository to your local machine.

@@ -113,3 +113,18 @@ const scrollObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => scrollObserver.observe(el));
 const sectionBlocks = document.querySelectorAll('.section');
 sectionBlocks.forEach(sec => scrollObserver.observe(sec));
+
+// 5. Contact form: opens the visitor's email client with the completed message.
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const name = data.get('name') || contactForm.querySelector('input[type="text"]').value;
+    const email = data.get('email') || contactForm.querySelector('input[type="email"]').value;
+    const message = data.get('message') || contactForm.querySelector('textarea').value;
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:nikitgupta61@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
