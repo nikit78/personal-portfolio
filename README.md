@@ -5,7 +5,7 @@
 > A highly interactive, fully responsive, and visually stunning personal portfolio built with HTML, CSS, and vanilla JavaScript. Features a futuristic glassmorphism design, custom CSS mesh gradients, 3D tilt effects, and smooth scroll animations.
 
 ## 🚀 Live Demo
-*(You can add your GitHub Pages link here once deployed!)*
+https://personal-portfolio-eight-alpha-60.vercel.app/
 
 ## ✨ Features
 *   **Premium 3D Glassmorphism UI**: A sleek, modern dark-themed aesthetic with neon accents.
