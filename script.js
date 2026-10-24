@@ -1,130 +1,170 @@
+
 /* =========================================
-   INTERACTIVE LOGIC - VERCEL/APPLE 
-   ========================================= */
+   NIKIT GUPTA — PORTFOLIO JAVASCRIPT
+   File: script.js
+========================================= */
 
-// 1. Typewriter Animation (Hero)
-const roles = ["Software Developer", "Creative Engineer", "Problem Solver"];
-const typewriterEl = document.getElementById('typewriter');
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingDelay = 100;
+document.addEventListener("DOMContentLoaded", () => {
+  // ---------------------------------------
+  // 1. Mobile navigation menu
+  // ---------------------------------------
 
-function typeWriter() {
-  const currentRole = roles[roleIndex];
-  
-  if (isDeleting) {
-    typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
-    charIndex--;
-    typingDelay = 40;
-  } else {
-    typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
-    charIndex++;
-    typingDelay = 100;
-  }
+  const menuToggle = document.getElementById("menu-toggle");
+  const siteNav = document.getElementById("site-nav");
 
-  if (!isDeleting && charIndex === currentRole.length) {
-    isDeleting = true;
-    typingDelay = 2000; // Pause at end of word
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
-    typingDelay = 500; // Pause before new word
-  }
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener("click", () => {
+      const isExpanded =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-  setTimeout(typeWriter, typingDelay);
-}
-if(typewriterEl) {
-  setTimeout(typeWriter, 1000);
-}
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!isExpanded)
+      );
 
-// 2. Mouse Follower / Subtle Glow 
-const mouseGlow = document.getElementById('mouse-glow');
-if (window.matchMedia("(pointer: fine)").matches) {
-  document.addEventListener('mousemove', (e) => {
-    mouseGlow.style.left = `${e.clientX}px`;
-    mouseGlow.style.top = `${e.clientY}px`;
-  });
-} else {
-  mouseGlow.style.display = 'none';
-}
+      menuToggle.setAttribute(
+        "aria-label",
+        isExpanded ? "Open navigation" : "Close navigation"
+      );
 
-// 3. 3D Hover Tilt Effect (Strict Apple/Vercel smooth physics)
-const init3DTilt = () => {
-  const cards = document.querySelectorAll('.hover-tilt');
-  
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left; 
-      const y = e.clientY - rect.top;  
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = ((y - centerY) / centerY) * -4; // Max rotation 4 degrees for subtle premium feel
-      const rotateY = ((x - centerX) / centerX) * 4;
-      
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
+      siteNav.classList.toggle("open", !isExpanded);
     });
-    
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-    });
-    
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'none'; // remove transition for smooth instantaneous tracking
-    });
-  });
-}
-// Init only on desktop to prevent mobile jitter
-if (window.innerWidth > 1024) {  
-  init3DTilt();
-}
 
-// 4. Smooth Scroll Reveal (Intersection Observer)
-const revealElements = document.querySelectorAll('.reveal');
-const navBtns = document.querySelectorAll('.nav-btn');
+    // Close the mobile menu when a navigation link is clicked.
+    const navLinks = siteNav.querySelectorAll("a");
 
-const scrollObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    // Reveal animation
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-    
-    // Active styling for floating sidebar
-    if (entry.isIntersecting && entry.target.classList.contains('section')) {
-      const currentId = entry.target.getAttribute('id');
-      navBtns.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-section') === currentId) {
-          btn.classList.add('active');
-        }
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
       });
+    });
+
+    // Close the menu when the user presses Escape.
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+
+    // Close the mobile menu when switching to desktop width.
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 800) {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+  }
+
+  // ---------------------------------------
+  // 2. Hero typing animation
+  // ---------------------------------------
+
+  const typewriter = document.getElementById("typewriter");
+
+  if (typewriter) {
+    const words = [
+      "backend engineering",
+      "full-stack development",
+      "AI-powered applications",
+      "building useful products"
+    ];
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      typewriter.textContent = words[0];
+    } else {
+      let wordIndex = 0;
+      let characterIndex = words[0].length;
+      let deleting = true;
+
+      function typeEffect() {
+        const currentWord = words[wordIndex];
+
+        if (deleting) {
+          characterIndex--;
+        } else {
+          characterIndex++;
+        }
+
+        typewriter.textContent = currentWord.slice(
+          0,
+          characterIndex
+        );
+
+        let delay = deleting ? 45 : 80;
+
+        if (!deleting && characterIndex === currentWord.length) {
+          deleting = true;
+          delay = 1300;
+        } else if (deleting && characterIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          delay = 350;
+        }
+
+        window.setTimeout(typeEffect, delay);
+      }
+
+      // Start by deleting the initially displayed text.
+      window.setTimeout(typeEffect, 1300);
     }
+  }
+
+  // ---------------------------------------
+  // 3. Automatically update footer year
+  // ---------------------------------------
+
+  const yearElement = document.getElementById("year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // ---------------------------------------
+  // 4. Smooth navigation fallback
+  // ---------------------------------------
+
+  const internalLinks = document.querySelectorAll(
+    'a[href^="#"]'
+  );
+
+  internalLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches
+            ? "auto"
+            : "smooth",
+          block: "start"
+        });
+
+        // Keep the URL in sync with the selected section.
+        if (window.location.hash !== targetId) {
+          history.replaceState(null, "", targetId);
+        }
+      }
+    });
   });
-}, {
-  threshold: 0.15,
-  rootMargin: "-10% 0px -20% 0px"
+
+  console.log("Nikit's portfolio is ready!");
 });
-
-revealElements.forEach(el => scrollObserver.observe(el));
-const sectionBlocks = document.querySelectorAll('.section');
-sectionBlocks.forEach(sec => scrollObserver.observe(sec));
-
-// 5. Contact form: opens the visitor's email client with the completed message.
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(contactForm);
-    const name = data.get('name') || contactForm.querySelector('input[type="text"]').value;
-    const email = data.get('email') || contactForm.querySelector('input[type="email"]').value;
-    const message = data.get('message') || contactForm.querySelector('textarea').value;
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:nikitgupta61@gmail.com?subject=${subject}&body=${body}`;
-  });
-}

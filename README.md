@@ -1,50 +1,87 @@
 # Nikit Gupta — Software Developer Portfolio
 
-![Portfolio Preview](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200)
-
-> A highly interactive, fully responsive, and visually stunning personal portfolio built with HTML, CSS, and vanilla JavaScript. Features a futuristic glassmorphism design, custom CSS mesh gradients, 3D tilt effects, and smooth scroll animations.
+A responsive personal portfolio built with **HTML5, CSS3, and vanilla JavaScript** to showcase my background, technical interests, projects, and contact details.
 
 ## 🚀 Live Demo
-https://personal-portfolio-eight-alpha-60.vercel.app/
+
+[View the Portfolio](https://personal-portfolio-eight-alpha-60.vercel.app/)
 
 ## ✨ Features
-*   **Premium 3D Glassmorphism UI**: A sleek, modern dark-themed aesthetic with neon accents.
-*   **Interactive 3D Hover Effects**: Elements react dynamically to mouse movements.
-*   **Custom Mesh Background**: Animated, multi-colored orbs that create a futuristic ambiance.
-*   **Typewriter Effect**: Dynamic hero text highlighting different roles and skills.
-*   **Smooth Scroll Navigation**: Floating sidebar navigation with active state tracking.
-*   **Fully Responsive Layout**: Beautifully scales across mobile, tablet, and desktop formats.
 
-## 🛠️ Technology Stack
-*   **Frontend**: HTML5, CSS3, Vanilla JavaScript
-*   **Typography**: Inter (Google Fonts)
-*   **Icons**: FontAwesome
-*   **Animations**: Custom CSS Keyframes and JavaScript `IntersectionObserver`
+- **Responsive Layout:** Designed for desktop, tablet, and mobile screens.
+- **Modern Dark Theme:** Gradient accents and ambient background effects.
+- **Animated Hero Text:** JavaScript-powered typewriter effect.
+- **Mobile Navigation:** Responsive menu with open/close behavior and Escape-key support.
+- **Project Showcase:** Highlights GitPulse, KnowFlow, and an in-progress satellite-image retrieval research project.
+- **Contact Links:** Quick access to email, GitHub, and LinkedIn.
+- **Résumé Link:** Works once `updated-resume.pdf` is added to the project folder.
 
-## 📂 Sections Included
-1.  **Home / Hero Section**: Contains the dynamic "developer.config" 3D card.
-2.  **About Me**: Details professional background and development philosophy.
-3.  **Tech Stack**: Grid layout highlighting Frontend, Backend, and Tooling proficiency.
-4.  **Projects**: Interactive display of "GitPulse" and "Diabetes Prediction System" logic.
-5.  **Experience**: Timeline map of internships and professional roles.
-6.  **Contact**: Fully structured contact form ready for backend integration.
+## 🛠️ Tech Stack
 
-## ✏️ Personalize Before Publishing
-* Replace **“Add your degree here”** in `index.html` with your actual college, degree, and graduation year.
-* Update each project’s GitHub and live-demo links with the specific repository or deployed URL. Do not leave a project link pointing only to your profile.
-* Add a professional headshot at `images/profile.jpg` for the best About section result.
-* Keep project descriptions outcome-focused: explain the problem, the technology used, and the result in 2–3 lines.
-* Add a PDF resume and link it from the hero once it is ready.
+- **HTML5** — Page structure
+- **CSS3** — Styling, responsive layouts, gradients, and animations
+- **Vanilla JavaScript** — Interactive behavior and typewriter effect
+- **Google Fonts** — DM Sans and Space Grotesk
+- **Deployment** — Vercel
 
-## 💻 Local Installation Setup
-If you want to run this project locally, no external dependencies are needed! 
-1. Clone this repository to your local machine.
-2. Open the `index.html` file directly in your web browser.
-3. Alternatively, launch a local server (e.g., using VS Code Live Server) for the best background rendering results.
+## 📂 Portfolio Sections
 
-## 📬 Contact Let's Connect
-*   **Email**: nikitgupta61@gmail.com
-*   **LinkedIn**: [Nikit Gupta](https://www.linkedin.com/in/nikit-gupta-2ab951255)
+1. **Home:** Introduction and résumé link.
+2. **About Me:** Background and development interests.
+3. **Skills:** Technologies and tools.
+4. **Projects:** Selected software and research projects.
+5. **Experience:** Web Developer Intern experience at Codec Technologies.
+6. **Education:** B.Tech in Computer Science, 2027 batch.
+7. **Contact:** Email, GitHub, and LinkedIn.
+
+## 💻 Featured Projects
+
+### 1. GitPulse — GitHub Profile Analyzer
+
+A project focused on exploring public GitHub profile and repository information and presenting it in a clearer format.
+
+**Technologies:** React.js, JavaScript, GitHub API
+
+> Replace the temporary GitHub profile link with the direct GitPulse repository URL when available.
+
+### 2. KnowFlow — Document Q&A with RAG
+
+An AI-focused project exploring Retrieval-Augmented Generation (RAG), including document preparation, relevant-context retrieval, and answer generation.
+
+**Focus Areas:** Backend development, RAG, vector search
+
+> Replace the temporary GitHub profile link with the direct KnowFlow repository URL when available.
+
+### 3. Cross-Modal Satellite Image Retrieval — In Progress
+
+A team research project exploring similarity search across optical and SAR satellite imagery. My current focus is backend integration and supporting services around the retrieval workflow.
+
+**Technologies / Areas:** Python, FAISS, APIs, backend integration, satellite imagery
+
+The project is still in progress. More details will be added as my contribution develops.
+
+## ⚙️ Run Locally
+
+No build step is required for the current static version.
+
+1. Clone or download the repository.
+2. Keep `index.html`, `style.css`, and `script.js` in the same folder.
+3. Open `index.html` in a browser, or use the **Live Server** extension in VS Code.
+
+## ✅ Before Publishing
+
+- Replace the temporary GitHub profile links on the GitPulse and KnowFlow cards with their direct repository URLs.
+- Add your résumé as `updated-resume.pdf`, or update/remove the résumé link in `index.html`.
+- Verify that the skills, education, experience, and project descriptions accurately reflect your work.
+- Add project demo links only when the demos are deployed and working.
+- Test the portfolio on desktop and mobile.
+
+## 📬 Contact
+
+- **Email:** [nikitgupta61@gmail.com](mailto:nikitgupta61@gmail.com)
+- **LinkedIn:** [Nikit Gupta](https://www.linkedin.com/in/nikit-gupta-2ab951255)
+- **GitHub:** [nikit78](https://github.com/nikit78)
 
 ---
-*Designed & Developed by Nikit Gupta.*
+
+Designed and developed by **Nikit Gupta**.

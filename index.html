@@ -1,403 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikit Gupta — Software Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
 
-  <!-- Typography: Inter for sleek Apple/Vercel feel -->
+  <meta name="description" content="Nikit Gupta — Computer Science student and aspiring software developer focused on backend systems, full-stack applications, and AI-powered search.">
+
+  <title>Nikit Gupta | Software Developer</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-  <!-- Animated Mesh Background -->
-  <div class="mesh-background">
-    <div class="color-orb orb-1"></div>
-    <div class="color-orb orb-2"></div>
-    <div class="color-orb orb-3"></div>
-  </div>
+  <!-- Navigation -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Nikit Gupta home">
+      <span class="brand-mark">N</span>
+      <span>Nikit Gupta<span class="brand-dot">.</span></span>
+    </a>
 
-  <!-- Smooth Mouse Follower Light -->
-  <div id="mouse-glow"></div>
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open navigation"
+    >
+      <span></span>
+      <span></span>
+    </button>
 
-  <!-- App Layout -->
-  <div class="app-layout">
+    <nav class="site-nav" id="site-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a class="nav-contact" href="#contact">Let's talk <span>↗</span></a>
+    </nav>
+  </header>
 
-    <!-- Floating Sidebar -->
-    <aside class="floating-sidebar glass" id="sidebar">
-      <div class="sidebar-top">
-        <div class="profile-mini">
-          <img src="https://ui-avatars.com/api/?name=Nikit+Gupta&background=222&color=fff&size=80" alt="Nikit">
+  <main>
+    <!-- Hero -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          COMPUTER SCIENCE · 
+        </p>
+
+        <h1>
+          I build useful software.<br>
+          <span class="gradient-text">One problem at a time.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm Nikit Gupta, a Computer Science student interested in
+          backend engineering, full-stack development, and AI-powered
+          applications. I enjoy turning ideas into practical products
+          with clear APIs, thoughtful data flow, and maintainable code.
+        </p>
+
+        <div class="hero-roles">
+          Currently exploring
+          <span id="typewriter">backend engineering , AI engineering</span>
+          <span class="caret">|</span>
         </div>
-      </div>
-      <nav class="sidebar-nav">
-        <a href="#home" class="nav-btn active" data-section="home" aria-label="Home">
-          <i class="fas fa-home"></i>
-          <span class="tooltip">Home</span>
-        </a>
-        <a href="#about" class="nav-btn" data-section="about" aria-label="About">
-          <i class="fas fa-layer-group"></i>
-          <span class="tooltip">About</span>
-        </a>
-        <a href="#skills" class="nav-btn" data-section="skills" aria-label="Skills">
-          <i class="fas fa-atom"></i>
-          <span class="tooltip">Stack</span>
-        </a>
-        <a href="#projects" class="nav-btn" data-section="projects" aria-label="Projects">
-          <i class="fas fa-box-open"></i>
-          <span class="tooltip">Projects</span>
-        </a>
-        <a href="#experience" class="nav-btn" data-section="experience" aria-label="Certifications">
-          <i class="fas fa-certificate"></i>
-          <span class="tooltip">Certifications</span>
-        </a>
-        <a href="#contact" class="nav-btn" data-section="contact" aria-label="Contact">
-          <i class="fas fa-paper-plane"></i>
-          <span class="tooltip">Contact</span>
-        </a>
-      </nav>
-      <div class="sidebar-bottom">
-        <a href="https://github.com/nikit78" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/nikit-gupta-dev" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </aside>
 
-    <!-- Main Content Flow -->
-    <main class="main-content">
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Explore my work <span>↘</span>
+          </a>
 
-      <!-- Hero Section -->
-      <section class="section hero" id="home">
-        <div class="hero-content reveal">
-          <div class="badge glass badge-glow">
-            <span class="dot"></span> Open to internships & opportunities
+          <a class="button button-secondary" href="#contact">
+            Get in touch
+          </a>
+
+          <a
+            class="text-link"
+            href="Nikit-1-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View résumé ↗
+          </a>
+        </div>
+
+        <p class="resume-note">
+          Add <code>updated-resume.pdf</code> to this folder when
+          you're ready to publish your résumé.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-top">
+          <div class="window-dots">
+            <i></i><i></i><i></i>
           </div>
-          <h1 class="headline">Building <br><span class="gradient-text">Next-Gen</span> Software.</h1>
-          <h2 class="role-text">I am a <span id="typewriter"></span><span class="cursor">|</span></h2>
-          <p class="hero-abstract">
-            Aspiring Software Engineer with a strong foundation in data structures, full-stack web development, and AI-driven solutions that improve user experience.
+
+          <span>nikit.dev / profile.json</span>
+          <span class="panel-live">● available</span>
+        </div>
+
+        <div class="code-panel">
+          <p><span class="code-purple">const</span> developer = {</p>
+          <p class="indent">
+            <span class="code-blue">name</span>:
+            <span class="code-green">'Nikit Gupta'</span>,
           </p>
-          <div class="hero-proof" aria-label="Professional summary">
-            <div><strong>Frontend</strong><span>React & modern web</span></div>
-            <div><strong>Backend</strong><span>APIs & databases</span></div>
-            <div><strong>Focus</strong><span>Clean user experiences</span></div>
-          </div>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Discover Work</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <p class="indent">
+            <span class="code-blue">education</span>:
+            <span class="code-green">'B.Tech CSE · 2027'</span>,
+          </p>
+          <p class="indent">
+            <span class="code-blue">interests</span>: [
+          </p>
+          <p class="indent double">
+            <span class="code-green">'Backend systems'</span>,
+          </p>
+          <p class="indent double">
+            <span class="code-green">'Full-stack development'</span>,
+          </p>
+          <p class="indent double">
+            <span class="code-green">'AI & retrieval systems'</span>
+          </p>
+          <p class="indent">],</p>
+          <p class="indent">
+            <span class="code-blue">mindset</span>:
+            <span class="code-green">'Learn, build, improve'</span>
+          </p>
+          <p>};</p>
+
+          <div class="terminal-line">
+            <span>➜</span>
+            <span>ready_to_build</span>
+            <b>_</b>
           </div>
         </div>
 
-        <!-- 3D Glass Hero Card -->
-        <div class="hero-visual reveal" style="transition-delay: 0.2s">
-          <div class="glass-board hover-tilt" data-tilt>
-            <div class="board-header">
-               <div class="mac-btns"><span></span><span></span><span></span></div>
-               <div class="board-title">developer.config</div>
-            </div>
-            <div class="board-body">
-               <p><span class="highlight">const</span> developer = {</p>
-               <p class="indent">name: <span class="string">'Nikit Gupta'</span>,</p>
-               <p class="indent">role: <span class="string">'Aspiring Software Engineer'</span>,</p>
-               <p class="indent">focus: <span class="string">'Full-stack apps & AI solutions'</span></p>
-               <p>};</p>
-               <p class="mt-2"><span class="highlight">developer</span>.deploy();</p>
-            </div>
-          </div>
+        <div class="panel-footer">
+          <span>Curious by nature</span>
+          <span>Always learning ↗</span>
         </div>
-      </section>
+      </div>
 
-      <!-- About Section -->
-      <section class="section about" id="about">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>01.</span> About Me</h3>
-          
-          <div class="about-split reveal">
-            <div class="about-text glass">
-              <h4>The Engine Behind the Code</h4>
+      <a class="scroll-cue" href="#about">
+        <span></span> SCROLL TO EXPLORE
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section-wrap section-block" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>
+          A developer in progress.<br>
+          <span class="muted-heading">A builder by habit.</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main card">
+          <p class="large-copy">
+            I’m building my foundation as a software engineer through
+            projects, hands-on development, and consistent
+            problem-solving practice.
+          </p>
+
+          <p>
+            My main interests are backend development, REST APIs,
+            database-backed applications, and AI features that make
+            information easier to find and use. I value readable code,
+            clear responsibilities, useful error handling, and
+            understanding how the pieces of an application work together.
+          </p>
+
+          <p>
+            Right now, I’m strengthening my Java, DSA, DBMS, and
+            web-development fundamentals while contributing to projects
+            that help me learn by building.
+          </p>
+        </div>
+
+        <div class="about-side">
+          <div class="mini-card">
+            <span class="mini-icon">⌘</span>
+            <div>
+              <h3>Build with purpose</h3>
               <p>
-                I am a Computer Science student at Dr. A.P.J. Abdul Kalam Technical University, graduating in 2027. I enjoy using data structures and modern web technologies to build practical, scalable software.
+                Focus on solving a real problem instead of adding
+                features just for show.
               </p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <span class="mini-icon">↗</span>
+            <div>
+              <h3>Keep improving</h3>
               <p>
-                Committed to writing clean, maintainable code and solving real-world problems through innovative solutions. I focus heavily on UI/UX, spacing, hierarchy, and smooth animations to deliver premium SaaS-like experiences.
+                Learn through implementation, testing, feedback,
+                and iteration.
               </p>
-              <a class="text-link" href="#contact">Let’s work together <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="about-visuals hover-tilt" data-tilt>
-               <img src="./images/profile.jpg" alt="Nikit Gupta" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'">
-               <div class="img-overlay gradient-overlay"></div>
+          </div>
+
+          <div class="mini-card">
+            <span class="mini-icon">{ }</span>
+            <div>
+              <h3>Think end to end</h3>
+              <p>
+                Connect the interface, API, data layer,
+                and user experience.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Skills Section -->
-      <section class="section skills" id="skills">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>02.</span> Tech Stack</h3>
-          
-          <div class="skills-grid">
-            
-            <!-- Category Frontend -->
-            <div class="skill-category glass reveal hover-tilt" data-tilt>
-              <div class="cat-header">
-                <i class="fas fa-layer-group gradient-text"></i>
-                <h4>Frontend Architecture</h4>
-              </div>
-              <div class="cat-body">
-                <div class="skill-pill">JavaScript</div>
-                <div class="skill-pill">React.js</div>
-                <div class="skill-pill">HTML5 & CSS3</div>
-                <div class="skill-pill">TypeScript</div>
-                <div class="skill-pill">Tailwind CSS</div>
+    <!-- Skills -->
+    <section class="section-wrap section-block" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">02 / TOOLKIT</p>
+        <h2>Tools I work with.</h2>
+        <p class="section-intro">
+          A practical toolkit that I’m continuing to develop
+          through coursework and projects.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card card">
+          <div class="skill-icon">01</div>
+          <h3>Languages</h3>
+          <p>Java · JavaScript · SQL · Python (project use)</p>
+        </article>
+
+        <article class="skill-card card">
+          <div class="skill-icon">02</div>
+          <h3>Web development</h3>
+          <p>HTML · CSS · React.js · Node.js · Express.js</p>
+        </article>
+
+        <article class="skill-card card">
+          <div class="skill-icon">03</div>
+          <h3>Backend & data</h3>
+          <p>REST APIs · MongoDB · MySQL · Mongoose · API debugging</p>
+        </article>
+
+        <article class="skill-card card">
+          <div class="skill-icon">04</div>
+          <h3>AI & retrieval</h3>
+          <p>RAG concepts · embeddings · vector search · FAISS (project work)</p>
+        </article>
+
+        <article class="skill-card card">
+          <div class="skill-icon">05</div>
+          <h3>Developer tools</h3>
+          <p>Git · GitHub · Postman · VS Code</p>
+        </article>
+
+        <article class="skill-card card">
+          <div class="skill-icon">06</div>
+          <h3>Core CS</h3>
+          <p>Data Structures & Algorithms · OOP · DBMS · computer networks</p>
+        </article>
+      </div>
+
+      <p class="fine-print">
+        Skills reflect learning and project experience;
+        proficiency varies by technology.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section class="section-wrap section-block" id="projects">
+      <div class="section-heading project-heading">
+        <div>
+          <p class="eyebrow">03 / SELECTED WORK</p>
+          <h2>Projects with a purpose.</h2>
+        </div>
+
+        <p class="section-intro">
+          I’ll keep adding projects as they become ready to show.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- GitPulse -->
+        <article class="project-card card">
+          <div class="project-art art-git">
+            <div class="art-orbit"></div>
+            <div class="art-window">
+              <span></span><span></span><span></span>
+              <div class="art-chart">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
             </div>
+            <span class="art-label">GITPULSE / ANALYTICS</span>
+          </div>
 
-            <!-- Category Backend -->
-            <div class="skill-category glass reveal hover-tilt" data-tilt style="transition-delay: 0.1s">
-              <div class="cat-header">
-                <i class="fas fa-server gradient-text"></i>
-                <h4>Backend & Logic</h4>
-              </div>
-              <div class="cat-body">
-                <div class="skill-pill">Node.js</div>
-                <div class="skill-pill">Express.js</div>
-                <div class="skill-pill">Python</div>
-                <div class="skill-pill">Java</div>
-                <div class="skill-pill">REST APIs</div>
-              </div>
+          <div class="project-info">
+            <div class="project-topline">
+              <span class="project-type">DEVELOPER TOOL</span>
+              <span class="project-status status-building">PROJECT</span>
             </div>
 
-            <!-- Category Tools -->
-            <div class="skill-category glass reveal hover-tilt" data-tilt style="transition-delay: 0.2s">
-              <div class="cat-header">
-                <i class="fas fa-database gradient-text"></i>
-                <h4>Data & Workflow</h4>
-              </div>
-              <div class="cat-body">
-                <div class="skill-pill">MongoDB</div>
-                <div class="skill-pill">MySQL</div>
-                <div class="skill-pill">Git / GitHub</div>
-                <div class="skill-pill">Mongoose</div>
-                <div class="skill-pill">Postman</div>
-                <div class="skill-pill">DSA & OOP</div>
-              </div>
+            <h3>GitPulse — GitHub Profile Analyzer</h3>
+
+            <p>
+              A web app concept for exploring public GitHub profiles
+              and presenting developer activity in a clearer format.
+              The goal is to make profile and repository information
+              easier to browse without requiring visitors to sign in.
+            </p>
+
+            <div class="tag-list">
+              <span>React.js</span>
+              <span>GitHub API</span>
+              <span>JavaScript</span>
             </div>
 
+            <div class="project-links">
+              <a
+                class="project-link"
+                href="https://github.com/nikit78/gitpulse"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub profile <span>↗</span>
+              </a>
+              <span class="link-note">
+                Replace with the project repository URL
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- KnowFlow -->
+        <article class="project-card card">
+          <div class="project-art art-know">
+            <div class="doc-stack">
+              <span>PDF</span>
+              <span>TXT</span>
+              <span>DOC</span>
+            </div>
+            <div class="search-orb"><span>⌕</span></div>
+            <div class="art-lines">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <span class="art-label">KNOWFLOW / RETRIEVAL</span>
+          </div>
+
+          <div class="project-info">
+            <div class="project-topline">
+              <span class="project-type">AI-POWERED SEARCH</span>
+              <span class="project-status status-building">PROJECT</span>
+            </div>
+
+            <h3>KnowFlow — Document Q&A with RAG</h3>
+
+            <p>
+              An AI-focused project exploring retrieval-augmented
+              generation (RAG): preparing document content, retrieving
+              relevant context, and using that context to support more
+              grounded answers. My focus includes understanding the
+              backend flow and how retrieval connects to generation.
+            </p>
+
+            <div class="tag-list">
+              <span>RAG</span>
+              <span>Backend</span>
+              <span>Vector search</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                class="project-link"
+                href="https://github.com/nikit78/KnowFlow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub profile <span>↗</span>
+              </a>
+              <span class="link-note">
+                Replace with the project repository URL
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Satellite project -->
+        <article class="project-card card">
+          <div class="project-art art-satellite">
+            <div class="satellite-grid"></div>
+            <div class="satellite-scan"></div>
+            <div class="satellite-pin">⌖</div>
+            <span class="art-label">CROSS-MODAL / SATELLITE SEARCH</span>
+          </div>
+
+          <div class="project-info">
+            <div class="project-topline">
+              <span class="project-type">TEAM / RESEARCH PROJECT</span>
+              <span class="project-status status-progress">IN PROGRESS</span>
+            </div>
+
+            <h3>Cross-Modal Satellite Image Retrieval</h3>
+
+            <p>
+              A team research project exploring similarity search
+              between optical and SAR satellite imagery. I’m focusing
+              on backend-side integration and supporting services
+              around the retrieval workflow while the model pipeline
+              is developed.
+            </p>
+
+            <div class="tag-list">
+              <span>Python</span>
+              <span>FAISS</span>
+              <span>APIs / backend</span>
+              <span>Satellite imagery</span>
+            </div>
+
+            <div class="project-links">
+              <span class="link-note">
+                Project details and repository link will be added
+                after my contribution is ready to present.
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="future-note">
+        <span class="future-symbol">＋</span>
+        <div>
+          <h3>More work is on the way</h3>
+          <p>
+            New projects will be added here after the implementation,
+            documentation, and repository links are ready.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section-wrap section-block" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">04 / EXPERIENCE</p>
+        <h2>Learning by doing.</h2>
+      </div>
+
+      <div class="timeline card">
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+
+          <div class="timeline-meta">
+            <span>WEB DEVELOPMENT</span>
+            <span>Internship</span>
+          </div>
+
+          <h3>Web Developer Intern · Codec Technologies</h3>
+
+          <p>
+            Worked with web-development workflows and MERN-stack
+            concepts, including backend tasks and API debugging.
+            This experience helped me connect application requirements
+            with implementation and troubleshooting.
+          </p>
+
+          <div class="tag-list">
+            <span>MERN concepts</span>
+            <span>Backend tasks</span>
+            <span>API debugging</span>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+
+          <div class="timeline-meta">
+            <span>ONGOING</span>
+            <span>Project-based learning</span>
+          </div>
+
+          <h3>Backend development & AI retrieval</h3>
+
+          <p>
+            Developing practical understanding through GitPulse,
+            KnowFlow, and a team satellite-image retrieval project.
+            I’m working toward clearer API design, data handling,
+            and maintainable project structure.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section-wrap section-block" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">05 / EDUCATION</p>
+        <h2>Building the fundamentals.</h2>
+      </div>
+
+      <div class="education-card card">
+        <div class="education-icon">✳</div>
+
+        <div>
+          <span class="project-type">2023 — 2027</span>
+          <h3>B.Tech in Computer Science</h3>
+          <p class="education-school">
+            Dronacharya Group of Institutions · AKTU
+          </p>
+          <p>
+            Coursework and independent practice in programming,
+            data structures, databases, and software development.
+            Expected graduation: 2027.
+          </p>
+        </div>
+
+        <span class="education-badge">UNDERGRADUATE</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-wrap contact-section" id="contact">
+      <div class="contact-panel card">
+        <div>
+          <p class="eyebrow">06 / CONTACT</p>
+
+          <h2>
+            Have a good problem<br>
+            to solve? <span class="gradient-text">Let’s talk.</span>
+          </h2>
+
+          <p class="contact-copy">
+            I’m open to entry-level software development roles,
+            internships, project collaboration, and conversations
+            about backend or full-stack engineering.
+          </p>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:nikitgupta61@gmail.com">
+              Email me <span>↗</span>
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://www.linkedin.com/in/nikit-gupta-2ab951255"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn
+            </a>
           </div>
         </div>
-      </section>
 
-      <!-- Projects Section -->
-      <section class="section projects" id="projects">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>03.</span> Featured Work</h3>
+        <div class="contact-details">
+          <a href="mailto:nikitgupta61@gmail.com">
+            <span class="detail-icon">@</span>
+            <span>
+              <small>EMAIL</small>
+              nikitgupta61@gmail.com
+            </span>
+            <b>↗</b>
+          </a>
 
-          <div class="projects-showcase">
-            
-            <!-- Project 1 -->
-            <article class="project-card glass reveal hover-tilt" data-tilt>
-              <div class="project-img">
-                <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=1000" alt="GitPulse">
-                <div class="project-hover-ui">
-                  <a href="https://github.com/nikit78" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Profile</a>
-                  <a href="https://github.com/nikit78" class="btn btn-secondary-icon"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">Web Application</div>
-                <h4 class="project-name">GitPulse — GitHub Analyzer</h4>
-                <p class="project-desc">
-                  A developer analytics tool that fetches public GitHub profiles and turns repository stats, top languages, star counts, and forks into clear Chart.js visualizations. Includes debounced search, pagination, error handling, and shareable profile links.
-                </p>
-                <div class="project-tags">
-                  <span>React.js</span><span>Chart.js</span><span>GitHub API</span>
-                </div>
-              </div>
-            </article>
+          <a
+            href="https://github.com/nikit78"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="detail-icon">⌘</span>
+            <span>
+              <small>GITHUB</small>
+              github.com/nikit78
+            </span>
+            <b>↗</b>
+          </a>
 
-            <!-- Project 2 -->
-            <article class="project-card glass reveal hover-tilt" data-tilt style="transition-delay: 0.1s">
-              <div class="project-img">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000" alt="Diabetes Prediction System dashboard">
-                <div class="project-hover-ui">
-                  <a href="https://github.com/nikit78" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Profile</a>
-                  <a href="https://github.com/nikit78" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">Machine Learning</div>
-                <h4 class="project-name">Diabetes Prediction System</h4>
-                <p class="project-desc">
-                  A machine-learning application that analyzes clinical inputs to estimate diabetes risk. The project pairs a trained prediction model with a simple, user-friendly interface for entering diagnostic values and viewing results.
-                </p>
-                <div class="project-tags">
-                  <span>Python</span><span>Scikit-learn</span><span>Flask</span><span>Data Science</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Project 3 -->
-            <article class="project-card glass reveal hover-tilt" data-tilt style="transition-delay: 0.2s">
-              <div class="project-img">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000" alt="SkillSphere AI collaboration platform">
-                <div class="project-hover-ui">
-                  <a href="https://github.com/nikit78" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Profile</a>
-                  <a href="https://github.com/nikit78" class="btn btn-secondary-icon"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">Full-Stack & AI</div>
-                <h4 class="project-name">SkillSphere AI - Freelancing Platform</h4>
-                <p class="project-desc">
-                  A scalable MERN freelancing platform featuring JWT authentication, role-based access, real-time chat, and AI-powered features. Integrated Razorpay payments and optimized REST APIs for secure, efficient collaboration.
-                </p>
-                <div class="project-tags">
-                  <span>MERN Stack</span><span>OpenAI API</span><span>Razorpay</span><span>JWT</span>
-                </div>
-              </div>
-            </article>
-
-          </div>
+          <a
+            href="https://www.linkedin.com/in/nikit-gupta-2ab951255"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="detail-icon">in</span>
+            <span>
+              <small>LINKEDIN</small>
+              Connect professionally
+            </span>
+            <b>↗</b>
+          </a>
         </div>
-      </section>
+      </div>
 
-      <!-- Education & Growth Section -->
-      <section class="section growth" id="education">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>04.</span> Education & Growth</h3>
-          <div class="growth-grid">
-            <article class="growth-card glass reveal">
-              <i class="fas fa-graduation-cap"></i>
-              <div>
-                <span class="eyebrow">Education</span>
-                <h4>B.Tech in Computer Science</h4>
-                <p>Dr. A.P.J. Abdul Kalam Technical University (AKTU) | Sep 2023 - May 2027 | CGPA: 7.2 (through semester 6)</p>
-              </div>
-            </article>
-            <article class="growth-card glass reveal" style="transition-delay: 0.1s">
-              <i class="fas fa-rocket"></i>
-              <div>
-                <span class="eyebrow">Beyond the classroom</span>
-                <h4>Problem solving & product thinking</h4>
-                <p>Interested in competitive programming, UI/UX design, problem solving, and data science. Fluent in English and Hindi.</p>
-              </div>
-            </article>
-            <article class="growth-card glass reveal" style="transition-delay: 0.2s">
-              <i class="fas fa-school"></i>
-              <div>
-                <span class="eyebrow">Academic foundation</span>
-                <h4>Intermediate (12th Grade)</h4>
-                <p>Vishwanath Inter College, Kannauj | Aug 2021 - May 2022 | 76.8%</p>
-              </div>
-            </article>
-            <article class="growth-card glass reveal" style="transition-delay: 0.3s">
-              <i class="fas fa-book-open"></i>
-              <div>
-                <span class="eyebrow">Academic foundation</span>
-                <h4>Matriculation (10th Grade)</h4>
-                <p>Kapil Muni Children's Academy, Bewar, Mainpuri | Aug 2019 - May 2020 | 69%</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <footer class="site-footer">
+        <a class="brand" href="#home">
+          <span class="brand-mark">N</span>
+          <span>Nikit Gupta<span class="brand-dot">.</span></span>
+        </a>
 
-      <!-- Experience Section -->
-      <section class="section experience" id="experience">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>05.</span> Certifications</h3>
+        <span>
+          Designed and built with care · <span id="year">2026</span>
+        </span>
 
-          <div class="experience-timeline glass reveal">
-            
-            <div class="timeline-node hover-tilt" data-tilt>
-              <div class="node-icon"><i class="fas fa-briefcase"></i></div>
-              <div class="node-content">
-                <span class="node-date">Oracle</span>
-                <h4 class="node-role">Generative AI Professional</h4>
-                <h5 class="node-company">Oracle Cloud Infrastructure 2025 Certified</h5>
-                <p class="node-text">
-                  Certification validating foundational knowledge of generative AI concepts and cloud applications.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-node hover-tilt" data-tilt>
-              <div class="node-icon"><i class="fas fa-network-wired"></i></div>
-              <div class="node-content">
-                <span class="node-date">Cisco</span>
-                <h4 class="node-role">Computer Networks</h4>
-                <h5 class="node-company">Certification</h5>
-                <p class="node-text">Developed a practical foundation in networking concepts and how modern systems communicate reliably.</p>
-              </div>
-            </div>
-
-            <div class="timeline-node hover-tilt" data-tilt>
-              <div class="node-icon"><i class="fas fa-code"></i></div>
-              <div class="node-content">
-                <span class="node-date">Infosys Springboard</span>
-                <h4 class="node-role">Java Programming</h4>
-                <h5 class="node-company">Certification</h5>
-                <p class="node-text">
-                  Built a stronger foundation in Java programming and object-oriented problem solving.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section contact" id="contact">
-        <div class="section-container">
-          <h3 class="section-title reveal"><span>06.</span> Initialize Contact</h3>
-
-          <div class="contact-card glass reveal hover-tilt" data-tilt>
-            <div class="contact-info">
-              <h2>Ready to build the future?</h2>
-              <p>Whether it's a new opportunity, an architectural discussion, or just saying hello—my inbox is always open.</p>
-              <div class="contact-links">
-                <a href="mailto:nikitgupta61@gmail.com"><i class="fas fa-envelope"></i> nikitgupta61@gmail.com</a>
-                <a href="tel:+917880970123"><i class="fas fa-phone"></i> +91 7880970123</a>
-                <a href="https://www.linkedin.com/in/nikit-gupta-dev" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
-              </div>
-            </div>
-            <form class="contact-form" id="contact-form">
-              <div class="input-wrap">
-                <input type="text" name="name" placeholder="Full Name" aria-label="Full name" required>
-              </div>
-              <div class="input-wrap">
-                <input type="email" name="email" placeholder="Email Address" aria-label="Email address" required>
-              </div>
-              <div class="input-wrap">
-                <textarea name="message" rows="4" placeholder="Message Details..." aria-label="Message" required></textarea>
-              </div>
-              <button class="btn btn-primary submit-btn">Transmit Message <i class="fas fa-arrow-right"></i></button>
-            </form>
-          </div>
-          
-          <footer class="bottom-footer">
-            <p>&copy; 2026 Designed & Developed by Nikit Gupta. Inspired by excellence.</p>
-          </footer>
-        </div>
-      </section>
-
-    </main>
-  </div>
-
-  <nav class="mobile-nav glass" aria-label="Mobile navigation">
-    <a href="#home" aria-label="Home"><i class="fas fa-home"></i></a>
-    <a href="#about" aria-label="About"><i class="fas fa-user"></i></a>
-    <a href="#projects" aria-label="Projects"><i class="fas fa-folder-open"></i></a>
-    <a href="#contact" aria-label="Contact"><i class="fas fa-paper-plane"></i></a>
-  </nav>
+        <a href="#home">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
